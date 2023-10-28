@@ -1,14 +1,16 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const html = ({name, stack, username, contact, repo,}) =>
+const html = ({title, author, description, install, usage, license, contribute, test}) =>
 
 `# Build CLI App Inquirer
-${name};
-## Description
-Work with a partner to implement the following user story:
-* My name is ${name}. As a developer, I want to create a command-line application that takes in input from the user and creates a README.
+${title};
+License Badge: ${licenseBadge(license)}
 
-## Acceptance Criteria
+## Criteria
+Work with a partner to implement the following user story:
+* My name is ${author}. As a developer, I want to create a command-line application that takes in input from the user and creates a README.
+
+# Acceptance Criteria
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
 THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -26,66 +28,118 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
 
-// IF you go to your terminal/bash window
-// THEN you go type in <node index.js>
-// WHEN you type in <node index.js>
-// THEN you will be met with a series of prompts
-// WHEN you fill out the prompts
-// THEN you will see “Success!” and will have generated a README file
-
 ## Table of Contents
+[Title](#title)
+<br>
 [Author](#author)
-[Technologies](#technologies)
+<br>
+[Description](#description)
+<br>
+[Installation](#installation)
+<br>
+[Usage](#usage)
+<br>
+[License](#license)
+<br>
+[Contributing Guidlines](#contributing_guidelines)
+<br>
 [Links](#links)
 
-## Instalation - npm install
-## Usage - What command needs to be used? How do I use this, what for?
-## License - Mit (link to MIT for information), n/a, examples
-## Contributing - How can people contribute (freetext)
-## Tests - Instructions What command do you run to test project (freetext)
-## Questions
-If you have questions, send me an email at ${contact}
+# Mock Up
 
-// ## Technologies
-// ${stack}
-// ## Links
-// ${repo}
+## Description
+${description}
+
+## Installation 
+${install}
+
+## Usage - What command needs to be used? How do I use this, what for?
+${usage}
+
+## License
+${license}
+
+License Link: ${licenseLink(license)}
+
+## Contributing Guidelines 
+${contribute}
+
+## Test Instructions
+${test}
+
+## Questions
+If you have questions, send me an email at [hoile1227@gmail.com](hoile1227@gmail.com)
+
 `
 
 inquirer
   .prompt([
     {
       type: 'input',
-      name: 'name',
+      name: 'title',
+      message: "What is your project title?"
+    },
+    {
+      type: 'input',
+      name: 'author',
       message: "What is your name?"
     },
     {
-      type: 'checkbox',
-      message: "What languages do you know?",
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'node.js', 'MySQL'],
+      type: 'input',
+      name: 'description',
+      message: "How would you describe this project?"
+    },
+    {
+      type: 'input',
+      name: 'install',
+      message: "What installations did you make for this project"
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: "What command needs to be used? How do I use this?"
     },
     {
       type: 'list',
-      message: "What is your preferred method of communication?",
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
+      message: "What license (if any) will you be using",
+      name: 'license',
+      choices: ['Mit License', 'Apache License 2.0', 'None'],
     },
     {
       type: 'input',
-      message: "What is your GitHub username? (No @ needed)",
-      name: 'username',
+      name: 'contribute',
+      message: "What were the contribution guidelines?"
     },
     {
       type: 'input',
-      message: "What is the name of your GitHub repo?",
-      name: 'repo',
-},
+      name: 'test',
+      message: "What are the test instructions?"
+    }
+
   ])
   .then((answers) => {
    const htmlPageContent = html(answers);
-    const filename = "README.md";
+    const filename = "README2.md";
     fs.writeFile(filename,htmlPageContent, (err) =>
       err ? console.log(err) : console.log('Success!'),
     )});
 
+function licenseLink(license) {
+  if(license==="Mit License") {
+    return `https://opensource.org/licenses/MIT`
+  }
+  else if(license==="Apache License 2.0") {
+    return `https://opensource.org/licenses/Apache-2.0`
+  }
+
+}
+
+function licenseBadge(license) {
+  if(license==="Mit License") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  }
+  else if(license==="Apache License 2.0") {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  }
+
+}
