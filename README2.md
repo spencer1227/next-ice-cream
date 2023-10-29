@@ -1,12 +1,12 @@
 # Build CLI App Inquirer
-na;
-License Badge: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# NA;
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Description
+## Criteria
 Work with a partner to implement the following user story:
-* My name is na. As a developer, I want to create a command-line application that takes in input from the user and creates a README.
+* My name is NA. As a developer, I want to create a command-line application that takes in input from the user and creates a README.
 
-## Acceptance Criteria
+# Acceptance Criteria
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
 THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -39,19 +39,20 @@ THEN I am taken to the corresponding section of the README
 <br>
 [Contributing Guidlines](#contributing_guidelines)
 <br>
-[Links](#links)
+[Test Instructions](#test_instructions)
+<br>
+[Questions](#questions)
 
-
-
+# Mock Up
 
 ## Description
-na
+NA
 
 ## Installation 
-na
+NA
 
-## Usage - What command needs to be used? How do I use this, what for?
-na
+## Usage
+NA
 
 ## License
 Mit License
@@ -59,11 +60,11 @@ Mit License
 License Link: https://opensource.org/licenses/MIT
 
 ## Contributing Guidelines 
-na
+NA
 
 ## Test Instructions
-na
+NA
 
 ## Questions
-If you have questions, send me an email at [hoile1227@gmail.com]
+If you have questions, send me an email at [hoile1227@gmail.com](#hoile1227@gmail.com)
 

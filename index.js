@@ -3,8 +3,8 @@ const fs = require('fs');
 const html = ({title, author, description, install, usage, license, contribute, test}) =>
 
 `# Build CLI App Inquirer
-${title};
-License Badge: ${licenseBadge(license)}
+# ${title}
+${licenseBadge(license)}
 
 ## Criteria
 Work with a partner to implement the following user story:
@@ -43,7 +43,9 @@ THEN I am taken to the corresponding section of the README
 <br>
 [Contributing Guidlines](#contributing_guidelines)
 <br>
-[Links](#links)
+[Test Instructions](#test_instructions)
+<br>
+[Questions](#questions)
 
 # Mock Up
 
@@ -53,7 +55,7 @@ ${description}
 ## Installation 
 ${install}
 
-## Usage - What command needs to be used? How do I use this, what for?
+## Usage
 ${usage}
 
 ## License
@@ -68,7 +70,7 @@ ${contribute}
 ${test}
 
 ## Questions
-If you have questions, send me an email at [hoile1227@gmail.com](hoile1227@gmail.com)
+If you have questions, send me an email at [hoile1227@gmail.com](#hoile1227@gmail.com)
 
 `
 
