@@ -69,6 +69,9 @@ ${contribute}
 ## Test Instructions
 ${test}
 
+## Video
+Video: 
+
 ## Questions
 If you have questions, send me an email at [hoile1227@gmail.com](#hoile1227@gmail.com)
 
@@ -121,7 +124,7 @@ inquirer
   ])
   .then((answers) => {
    const htmlPageContent = html(answers);
-    const filename = "README2.md";
+    const filename = "README.md";
     fs.writeFile(filename,htmlPageContent, (err) =>
       err ? console.log(err) : console.log('Success!'),
     )});
