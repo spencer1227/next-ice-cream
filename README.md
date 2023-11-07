@@ -1,11 +1,11 @@
 # Build CLI App Inquirer
-# a
+# README Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Criteria
 Work with a partner to implement the following user story:
-* My name is a. As a developer, I want to create a command-line application that takes in input from the user and creates a README.
+* My name is Spencer Hoile. As a developer, I want to create a command-line application that takes in input from the user and creates a README.
 
 # Acceptance Criteria
 GIVEN a command-line application that accepts user input
@@ -61,13 +61,13 @@ THEN I am taken to the corresponding section of the README
 # Mock Up
 
 ## Description
-a
+Create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
 
 ## Installation 
-a
+node.js
 
 ## Usage
-a
+npm install
 
 ## License
 Mit License
@@ -75,10 +75,10 @@ Mit License
 License Link: https://opensource.org/licenses/MIT
 
 ## Contributing Guidelines 
-a
+Create, clone the repo, then edit in VS Code
 
 ## Test Instructions
-a
+Follow Acceptance Criteria
 
 ## Video
 Video: 
