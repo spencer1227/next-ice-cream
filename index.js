@@ -3,7 +3,9 @@ const fs = require('fs');
 const html = ({title, author, description, install, usage, license, contribute, test}) =>
 
 `# Build CLI App Inquirer
+<br>
 # ${title}
+<br>
 ${licenseBadge(license)}
 
 ## Criteria
